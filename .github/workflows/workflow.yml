@@ -10,9 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2  # Use v2 for more stability
+        uses: actions/checkout@v2
 
       - name: Run Jenkins Pipeline
         uses: jenkinsci/jenkinsfile-runner-github-actions/jenkinsfile-runner-prepackaged@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_JENKINSFILE: 'Jenkinsfile'
+          INPUT_PLUGINSTXT: 'plugins.txt'
+          INPUT_COMMAND: 'run'
