@@ -1,9 +1,9 @@
-name: Jenkins single-shot master
+name: Jenkins Master Pipeline
 
 on:
   push:
     branches:
-      - main  # Adjust based on your default branch
+      - master
 
 jobs:
   jenkinsfile-runner-prepackaged:
