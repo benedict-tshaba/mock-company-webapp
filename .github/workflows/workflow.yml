@@ -12,6 +12,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Jenkinsfile Runner Prepackaged
+        uses: jenkinsci/jenkinsfile-runner-github-actions@v0.2
+
       - name: Run Jenkins Pipeline
         uses: jenkinsci/jenkinsfile-runner-github-actions/jenkinsfile-runner-prepackaged@master
         env:
